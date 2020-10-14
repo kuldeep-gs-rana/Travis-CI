@@ -1,6 +1,5 @@
 <settings>
-    <servers>
-        
+    <servers> 
         <server>
             <id>anypoint-exchange-v2</id>
             <username>${username}</username>
