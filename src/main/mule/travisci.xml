@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e764eb0d-2220-4cd8-9653-0a77cc65c2cf" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="travisciFlow" doc:id="9f41efe8-ae30-418d-aa15-050f1f307617" >
+		<http:listener doc:name="Listener" doc:id="64190795-731c-4609-9297-67402fa554b9" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value='#["travisCI"]' doc:name="Set Payload" doc:id="1eb965e3-f1c6-4135-8a00-d5946f4a403c" />
+		<logger level="INFO" doc:name="Logger" doc:id="5ef8bc00-35e5-4c25-b2f4-3de601b2ce49" />
+	</flow>
+</mule>
