@@ -42,6 +42,7 @@
 						<workerType>${anypoint.workerType}</workerType>
 						<workers>${anypoint.workers}</workers>
 						<businessGroup>${anypoint.businessGroup}</businessGroup>
+						<objectStoreV2>${anypoint.objectStore}</objectStoreV2>
 						<properties>
 				                	<key>value</key>
 						</properties>

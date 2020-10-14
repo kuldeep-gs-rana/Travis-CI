@@ -23,7 +23,7 @@ jobs:
    - stage: Deploy #stage type
      name: "Deploy stage" #stage name
      script:
-          - mvn deploy -DmuleDeploy -Danypoint.username=$username -Danypoint.password=$password -Danypoint.environment=$environment -Danypoint.workerType=$workerType -Danypoint.businessGroup=$businessGroup -Danypoint.workers=$workers -Danypoint.appName=$applicationName 
+          - mvn deploy -DmuleDeploy -Danypoint.username=$username -Danypoint.password=$password -Danypoint.environment=$environment -Danypoint.workerType=$workerType -Danypoint.businessGroup=$businessGroup -Danypoint.workers=$workers -Danypoint.appName=$applicationName -Danypoint.objectStore=$objectStore
 
 notifications:
     email:
